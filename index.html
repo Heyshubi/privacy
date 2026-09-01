@@ -66,14 +66,15 @@
   <h1>AI Keyboard — Privacy Policy</h1>
   <p class="meta">
     Application ID: <code>com.aikeyboard.app</code><br>
-    Last updated: 30 August 2026
+    Last updated: 1 September 2026
   </p>
 
   <div class="lead">
     <p><strong>The short version.</strong> What you type is not collected, not
-    stored and not sent anywhere. Text leaves your phone only at the moment you
-    tap one of the AI buttons, and only the message you are working on. It is
-    used to produce the rewrite, returned to you, and not kept.</p>
+    stored and not sent anywhere. Three things do leave your phone, and only
+    when you ask for them: the sentence you are working on when you tap an AI
+    button, a voice note when you tap Transcribe, and a promo code when you
+    enter one. None of them is kept after it has been answered.</p>
   </div>
 
   <h2>Who this is from</h2>
@@ -85,150 +86,232 @@
 
   <h2>What the keyboard can see, and what it does with it</h2>
   <p>
-    A keyboard has to receive what you type in order to type it. Android shows a
-    warning about this when you enable any keyboard, including this one. What
-    matters is what the keyboard then does, and this one does nothing: your
-    keystrokes are used to insert characters into the app you are using and are
-    not recorded, analysed, stored or transmitted.
+    A keyboard has to receive what you type in order to type it. Android shows
+    a warning about this when you enable any keyboard, and it is true of this
+    one as much as any other.
   </p>
   <p>
     There is no logging of what you type. There is no learning dictionary, no
-    typing history and no cloud sync.
+    typing history and no cloud sync. Word suggestions, Hindi transliteration
+    and the emoji suggestions are all worked out on the phone.
   </p>
 
   <h2>When text leaves your phone</h2>
   <p>
-    Only when you tap one of the AI buttons on the toolbar — Fix, Rewrite,
-    Friendly, Professional, Flirty, Hinglish, Translate, or a tone you created
-    yourself. Tapping one sends the text currently in the box to our server so it
-    can be rewritten, and the rewritten text comes back and replaces it.
+    Only when you tap one of the AI buttons — Fix, Rewrite, Friendly,
+    Professional, Flirty, Hinglish, Translate, Reply, or one of your own tones.
+    Nothing is sent while you are simply typing. No button, no transmission.
   </p>
-  <p>Nothing is sent while you are simply typing. No button, no transmission.</p>
-
-  <h3>What is sent</h3>
-  <table>
-    <tr>
-      <th>The message text</th>
-      <td>Only the contents of the text box you are in, at the moment you tap the button.</td>
-    </tr>
-    <tr>
-      <th>Which button you tapped</th>
-      <td>For example <code>rewrite</code> or <code>translate</code>, plus the language you chose, or the wording of a tone you wrote yourself.</td>
-    </tr>
-    <tr>
-      <th>A random installation number</th>
-      <td>Generated on this device the first time the app runs. It is a random number and nothing else — see below.</td>
-    </tr>
-  </table>
-
-  <h3>Where AI buttons never work</h3>
   <p>
-    The AI buttons are removed, not merely disabled, in:
+    What is sent is the message you are working on, the button you pressed, and
+    the random installation number described below. It is used to produce the
+    answer, returned to you, and not kept.
   </p>
+
+  <h3>Where the AI buttons never work</h3>
+  <p>The AI buttons are removed, not merely disabled, in:</p>
   <ul>
-    <li><strong>password fields</strong> of every kind — text passwords, web
-      passwords, the “show password” variety, and numeric PINs;</li>
-    <li><strong>any field an app has marked as private</strong>, which is how a
-      browser marks an incognito tab and how banking and health apps mark
-      sensitive fields.</li>
+    <li>password fields of every kind — text passwords, web passwords, the
+    “show password” variety, and numeric PINs;</li>
+    <li>any field an app has marked as private, which is how a browser marks an
+    incognito tab and how banking and health apps mark sensitive boxes.</li>
   </ul>
   <p>
     In those boxes the toolbar says so and the buttons are gone. There is no
-    setting to switch this off. Typing works as normal.
+    setting to switch this off. Typing works normally; nothing is sent.
+  </p>
+
+  <h2>Voice typing</h2>
+  <p>
+    Tapping the microphone uses your phone's own speech recognition. On phones
+    that support recognition on the device — most modern ones — the
+    audio never leaves the phone and we never receive it. If your phone has no
+    on-device recogniser and falls back to Google's, that audio is handled by
+    Google under Google's policy, not ours. Either way the recording does not
+    come to us and is not stored by this app.
+  </p>
+  <p>
+    The microphone is only ever live while the indicator says
+    “Listening”, and it stops when you tap it again.
+  </p>
+
+  <h2>Transcribing a voice note</h2>
+  <p>
+    If you switch it on, the keyboard can turn a voice note you have been sent
+    into text. This is the one feature where a recording leaves your phone, so
+    it is worth being exact about it.
+  </p>
+  <ul>
+    <li><strong>You choose the folder.</strong> Android asks you to pick the
+    folder your chat app saves voice notes in, and nothing else on your phone
+    becomes readable. You can take that permission back at any time, in the
+    app's settings or Android's.</li>
+    <li><strong>Nothing happens on its own.</strong> A note is only ever read
+    after you tap Transcribe. The keyboard does not transcribe in the
+    background.</li>
+    <li><strong>The recording is not stored.</strong> It is sent to our server,
+    turned into text, and deleted as soon as that is done — including when
+    something goes wrong. It is never written to disk on our side, never backed
+    up, and never sent to anyone else.</li>
+    <li><strong>It is transcribed on our own server</strong>, by a speech model
+    we run ourselves. The audio is not sent to Anthropic, Google, OpenAI or any
+    other company.</li>
+  </ul>
+  <p>
+    Our server records that a transcription happened, how long the audio was
+    and which language it turned out to be in. It does not record the audio or
+    what was said.
+  </p>
+  <p>
+    Transcription currently works for English, Hindi, Spanish and Russian. If a
+    note is in another language the keyboard says so and does not transcribe
+    it.
+  </p>
+
+  <h2>Chat Memory</h2>
+  <p>
+    Chat Memory is off unless you switch it on yourself and grant it
+    separately. It uses Android's accessibility service, which is a powerful
+    permission, so here is exactly what it does and does not do.
+  </p>
+  <ul>
+    <li>It reads <strong>only the title</strong> of the chat you have open —
+    the name at the top of the screen — and only in messaging apps.</li>
+    <li>That title is turned into an unreadable fingerprint on your phone
+    before it is used, and the name itself is thrown away.</li>
+    <li>It <strong>never reads your messages</strong>, never sees your
+    keystrokes, and none of it is ever sent off the phone.</li>
+    <li>Its only purpose is to remember which writing tone you pinned to which
+    conversation.</li>
+  </ul>
+  <p>
+    Switching it off in the app's settings, or turning the service off in
+    Android's accessibility settings, stops it completely.
+  </p>
+
+  <h2>Clipboard history</h2>
+  <p>
+    Off by default. When you switch it on, the keyboard keeps a short list of
+    things you have copied so you can paste them again. That list stays on your
+    phone, is never sent anywhere, and is deliberately excluded from Android
+    Backup so it does not end up in your Google Drive. Clearing it in the
+    clipboard panel removes it.
   </p>
 
   <h2>The random installation number</h2>
   <p>
     The app generates a random number the first time it runs and sends it with
-    each rewrite. It exists for one reason: to count how many rewrites this
-    installation has used today, so the free daily allowance can be applied.
+    each request. It exists for one reason: to count how many AI actions and
+    transcriptions an install has used, so the free allowance can be applied.
   </p>
   <p>
     It is not your advertising ID, your phone's serial number, your account, or
-    anything else that identifies you or your device. It is not linked to any
-    other information. Uninstalling the app discards it; reinstalling generates a
-    new one. The server keeps only a count against it, in memory, and that count
-    is discarded when the counter resets or the server restarts.
+    anything else that identifies you or follows you between apps. Uninstalling
+    the app discards it, and reinstalling produces a new one.
   </p>
 
-  <h2>Who processes the text</h2>
+  <h2>Your plan, and what the server keeps</h2>
   <p>
-    The rewrite itself is performed by <strong>Anthropic</strong>'s Claude model.
-    Our server passes your message to Anthropic's API, receives the rewritten
-    text, and returns it to your phone. Anthropic processes it in order to
-    produce the reply. See
-    <a href="https://www.anthropic.com/legal/privacy" rel="noopener">Anthropic's privacy policy</a>
-    for how they handle API data.
+    Against that random number, our server stores only: which plan the install
+    is on, how many AI actions and transcriptions it has used in the current
+    period, and when that period resets. No messages, no audio, no names, no
+    email address, no payment details.
   </p>
   <p>
-    Our server is hosted on <strong>Railway</strong>, which operates the
-    infrastructure it runs on. Neither our server nor the app writes your message
-    to a database, a file or a log.
+    If you enter a promo code, the code is sent to our server to be checked and
+    the result recorded against that same random number. Nothing else about you
+    is involved.
+  </p>
+
+  <h2>Who processes what</h2>
+  <p>
+    Rewrites, replies and translations are performed by Anthropic's Claude
+    model. Our server passes the message to Anthropic's API and returns the
+    answer to you. Anthropic processes it to produce that answer.
   </p>
   <p>
-    The text is not sold, rented, or shared with anyone else. It is not used for
-    advertising, and it is not used to build a profile of you.
+    Voice notes are transcribed by a model running on our own server, and are
+    not sent to Anthropic or to any other company.
+  </p>
+  <p>
+    Our server is hosted on Railway, which operates the infrastructure it runs
+    on. Neither our server nor the app keeps your messages after answering.
+  </p>
+  <p>
+    Nothing is sold, rented, or shared with anyone else. Nothing is used for
+    advertising, and nothing is used to build a profile of you.
   </p>
 
   <h2>What stays on your phone</h2>
   <p>
-    Your settings are stored on the device and never sent anywhere: the theme,
-    the see-through level, the keyboard size, your default tone, the tones you
-    wrote yourself, the language Translate opens on, the emoji you used recently,
-    and the number of rewrites left today.
+    Your settings never leave the device: the theme, the see-through level, the
+    keyboard size and position, which languages are on, your own custom tones,
+    which buttons are on the toolbar, the pinned tone, recent emoji, and the
+    clipboard list if you switched it on.
   </p>
   <p>
-    If you have Android Backup switched on, Google may include these settings in
-    your device backup, in the same way it does for other apps. That backup is
-    between you and Google; we do not receive it.
+    If you have Android Backup switched on, Google may include your settings in
+    your device backup, in the same way it does for other apps. The clipboard
+    list is excluded from that backup on purpose.
   </p>
 
   <h2>Permissions</h2>
+  <ul>
+    <li><strong>Internet</strong> — to reach our server when you tap an AI
+    button or transcribe a voice note.</li>
+    <li><strong>Microphone</strong> — only for voice typing, and only while
+    you are holding the microphone on. The app cannot and does not record at
+    any other time.</li>
+    <li><strong>A folder you choose</strong> — only if you switch voice note
+    transcription on, and only the folder you pick.</li>
+    <li><strong>Accessibility</strong> — only if you switch Chat Memory on,
+    and used only as described above.</li>
+  </ul>
   <p>
-    The app requests exactly one Android permission: <code>INTERNET</code>, which
-    it needs to reach the rewrite server. It does not request contacts, storage,
-    location, camera, microphone, or the phone state.
+    The app asks for no other permissions. It cannot read your contacts, your
+    location, your photos or your files.
   </p>
 
   <h2>Analytics, advertising and tracking</h2>
   <p>
     There are none. The app contains no analytics library, no advertising
-    library, no crash reporter and no third-party tracking of any kind. The only
-    libraries it includes are Google's own AndroidX and Material interface
-    components, which do not collect data.
+    library, no crash reporter and no third-party trackers of any kind.
   </p>
 
   <h2>Children</h2>
   <p>
     AI Keyboard is not directed at children under 13, and we do not knowingly
-    collect information from them. Because the app collects no personal
-    information from anyone, there is nothing held about a child to delete — but
-    if you believe otherwise, write to the address above and we will look into
-    it.
+    collect information from them. Because the app has no accounts and collects
+    no personal details, there is nothing to identify a child by.
   </p>
 
   <h2>Your choices and your rights</h2>
   <ul>
-    <li><strong>Stop text being sent at all</strong> — do not tap the AI buttons.
-      The keyboard works fully without them.</li>
-    <li><strong>Remove everything</strong> — uninstalling the app deletes every
-      setting it stored and discards the random installation number. There is no
-      account to close, because there is no account.</li>
-    <li><strong>Ask a question, or ask for deletion</strong> — write to
-      <a href="mailto:heyshubigraphics@gmail.com">heyshubigraphics@gmail.com</a>.
-      Since messages are not stored, there is normally nothing to delete, but we
-      will confirm that to you.</li>
+    <li><strong>Stop text being sent at all</strong> — do not tap the AI
+    buttons. The keyboard works fully without them.</li>
+    <li><strong>Stop voice notes being read</strong> — turn Voice notes off
+    in settings, which gives the folder permission back.</li>
+    <li><strong>Stop Chat Memory</strong> — switch it off in the app, or turn
+    the service off in Android's accessibility settings.</li>
+    <li><strong>Remove everything</strong> — uninstalling the app deletes
+    every setting it stored and discards the random installation number.</li>
+    <li><strong>Ask for deletion</strong> — write to
+    <a href="mailto:heyshubigraphics@gmail.com">heyshubigraphics@gmail.com</a>.
+    Since messages and recordings are never stored, the only thing that can
+    exist is the usage count against your random number; tell us the number, or
+    simply uninstall, and it is gone.</li>
   </ul>
 
   <h2>Changes to this policy</h2>
   <p>
-    If this policy changes, the date at the top of this page changes with it, and
-    the current version is always the one published at this address. Material
-    changes will also be described in the app's release notes on Google Play.
+    If this policy changes, the date at the top of this page changes with it,
+    and the current version is always the one published at this address.
+    Material changes will also be described in the app's release notes on
+    Google Play.
   </p>
 
   <p class="foot">
-    AI Keyboard · <code>com.aikeyboard.app</code> · Contact:
+    AI Keyboard — <code>com.aikeyboard.app</code> — Contact:
     <a href="mailto:heyshubigraphics@gmail.com">heyshubigraphics@gmail.com</a>
   </p>
 
