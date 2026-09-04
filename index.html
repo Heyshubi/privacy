@@ -66,15 +66,17 @@
   <h1>AI Keyboard — Privacy Policy</h1>
   <p class="meta">
     Application ID: <code>com.aikeyboard.app</code><br>
-    Last updated: 1 September 2026
+    Last updated: 4 September 2026
   </p>
 
   <div class="lead">
     <p><strong>The short version.</strong> What you type is not collected, not
-    stored and not sent anywhere. Three things do leave your phone, and only
+    stored and not sent anywhere. Four things do leave your phone, and only
     when you ask for them: the sentence you are working on when you tap an AI
-    button, a voice note when you tap Transcribe, and a promo code when you
-    enter one. None of them is kept after it has been answered.</p>
+    button, the message you are answering when you tap Reply (and, if you have
+    switched Chat context on, the messages visible in that chat), a voice note
+    when you tap Transcribe, and a promo code when you enter one. None of them
+    is kept after it has been answered.</p>
   </div>
 
   <h2>Who this is from</h2>
@@ -106,6 +108,15 @@
     What is sent is the message you are working on, the button you pressed, and
     the random installation number described below. It is used to produce the
     answer, returned to you, and not kept.
+  </p>
+  <p>
+    <strong>Reply</strong> is slightly different, because a reply is about
+    somebody else's message. It answers whatever you last copied — or, with
+    Chat context switched on, the conversation on screen (see below). Before
+    either is sent, the keyboard checks it on the phone for things that should
+    never travel: anything that looks like a one-time code, a password or a PIN
+    is refused outright, and card numbers and other long numbers are blanked
+    out.
   </p>
 
   <h3>Where the AI buttons never work</h3>
@@ -168,25 +179,83 @@
     it.
   </p>
 
-  <h2>Chat Memory</h2>
+  <h2>Chat context (Chat Memory)</h2>
   <p>
-    Chat Memory is off unless you switch it on yourself and grant it
-    separately. It uses Android's accessibility service, which is a powerful
-    permission, so here is exactly what it does and does not do.
+    Chat context is off unless you switch it on yourself, in the app, and then
+    grant it separately in Android's accessibility settings. It uses Android's
+    accessibility service, which is a powerful permission, so here is exactly
+    what it does, when, and where the text goes.
   </p>
+  <h3>What it reads</h3>
   <ul>
-    <li>It reads <strong>only the title</strong> of the chat you have open —
-    the name at the top of the screen — and only in messaging apps.</li>
-    <li>That title is turned into an unreadable fingerprint on your phone
-    before it is used, and the name itself is thrown away.</li>
-    <li>It <strong>never reads your messages</strong>, never sees your
-    keystrokes, and none of it is ever sent off the phone.</li>
-    <li>Its only purpose is to remember which writing tone you pinned to which
-    conversation.</li>
+    <li><strong>The name of the chat you have open</strong> — the title at the
+    top of the screen — in messaging apps only. That name is turned into an
+    unreadable fingerprint on your phone and the name itself is thrown away.
+    The fingerprint is used for one thing: remembering which writing tone you
+    pinned to which conversation. It is never sent anywhere.</li>
+    <li><strong>The messages visible on screen, only at the moment you tap
+    Reply.</strong> The keyboard reads the chat once, right then, so the reply
+    fits the conversation instead of answering one line out of context. It
+    does not read while you type, while messages arrive, while you scroll, or
+    in the background — there is no path in the app by which it can. It never
+    sees your keystrokes.</li>
   </ul>
+  <h3>Which apps</h3>
   <p>
-    Switching it off in the app's settings, or turning the service off in
-    Android's accessibility settings, stops it completely.
+    Only messaging apps, and the list is fixed inside the app: WhatsApp,
+    WhatsApp Business, Instagram, Telegram, Signal, Messenger, Snapchat, Google
+    Messages, Teams, Slack, Discord and LinkedIn. Android itself stops the
+    service being told about any other app. Email apps are not on the list.
+    Message reading currently works in WhatsApp, WhatsApp Business, Instagram
+    and Telegram; in the others only the chat name is used.
+  </p>
+  <h3>Where the messages go</h3>
+  <p>
+    The messages read when you tap Reply are sent, over an encrypted
+    connection, to our server, and our server passes them to Anthropic's
+    Claude model, which writes the reply. That is the whole journey: your
+    phone, our server, Anthropic, and back.
+  </p>
+  <p>
+    Before they leave the phone they are filtered: any message that looks like
+    a one-time code, a password or a PIN is dropped entirely, and card numbers
+    and other long numbers are blanked out. Only the most recent messages that
+    fit are sent — at most fifteen, and never more than a few thousand
+    characters.
+  </p>
+  <h3>What is stored</h3>
+  <p>
+    Nothing. The messages are not saved on your phone, not written to any
+    log, and not stored by our server — they are used to write the reply and
+    discarded with the request. Anthropic processes them to produce the answer
+    under its own API terms and does not use them to train its models. The
+    only thing the app keeps is the fingerprint-to-tone list described above,
+    which contains no names and no messages.
+  </p>
+  <h3>Where it never works</h3>
+  <p>
+    Never in a password or PIN box, never in an app that is not on the list,
+    and never unless you tapped Reply. If you would rather one particular
+    reply used only what you copied, tap the chip that appears on the
+    suggestion row and it does exactly that.
+  </p>
+  <h3>Turning it off</h3>
+  <p>
+    There are two switches, and they do different things.
+  </p>
+  <p>
+    Either switch stops it reading. Turn Chat context off in the app's
+    settings, or turn the AI Keyboard service off in Android's accessibility
+    settings: from that moment the app can no longer see which chat is open
+    or read any message.
+  </p>
+  <p>
+    Only the in-app switch deletes what it remembered. Turning Chat context
+    off in the app's settings also erases every chat fingerprint and pinned
+    tone from your phone at once. Turning the service off in Android's
+    accessibility settings does not: the fingerprints and pinned tones stay
+    stored on your phone, unused, until you switch Chat context off in the
+    app or uninstall it.
   </p>
 
   <h2>Clipboard history</h2>
@@ -226,8 +295,10 @@
   <h2>Who processes what</h2>
   <p>
     Rewrites, replies and translations are performed by Anthropic's Claude
-    model. Our server passes the message to Anthropic's API and returns the
-    answer to you. Anthropic processes it to produce that answer.
+    model. Our server passes the message — and, for a reply with Chat context
+    on, the messages read from the chat — to Anthropic's API and returns the
+    answer to you. Anthropic processes them to produce that answer and does
+    not use them to train its models.
   </p>
   <p>
     Voice notes are transcribed by a model running on our own server, and are
@@ -264,8 +335,9 @@
     any other time.</li>
     <li><strong>A folder you choose</strong> — only if you switch voice note
     transcription on, and only the folder you pick.</li>
-    <li><strong>Accessibility</strong> — only if you switch Chat Memory on,
-    and used only as described above.</li>
+    <li><strong>Accessibility</strong> — only if you switch Chat context on,
+    and used only as described above: the chat name, and the messages on screen
+    when you tap Reply.</li>
   </ul>
   <p>
     The app asks for no other permissions. It cannot read your contacts, your
@@ -291,8 +363,13 @@
     buttons. The keyboard works fully without them.</li>
     <li><strong>Stop voice notes being read</strong> — turn Voice notes off
     in settings, which gives the folder permission back.</li>
-    <li><strong>Stop Chat Memory</strong> — switch it off in the app, or turn
-    the service off in Android's accessibility settings.</li>
+    <li><strong>Stop Chat context reading</strong> — switch it off in the
+    app, or turn the service off in Android's accessibility settings. Either
+    one stops it.</li>
+    <li><strong>Delete what Chat context remembered</strong> — switch it off
+    in the app. Only that deletes the stored chat fingerprints and pinned
+    tones; turning the service off in Android's accessibility settings leaves
+    them on the phone.</li>
     <li><strong>Remove everything</strong> — uninstalling the app deletes
     every setting it stored and discards the random installation number.</li>
     <li><strong>Ask for deletion</strong> — write to
