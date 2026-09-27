@@ -229,9 +229,10 @@
     Nothing. The messages are not saved on your phone, not written to any
     log, and not stored by our server — they are used to write the reply and
     discarded with the request. Anthropic processes them to produce the answer
-    under its own API terms and does not use them to train its models. The
-    only thing the app keeps is the fingerprint-to-tone list described above,
-    which contains no names and no messages.
+    under its own API terms, does not use them to train its models, and may
+    keep them for a limited time under its own policies, for example to
+    detect abuse. The only thing the app keeps is the fingerprint-to-tone list
+    described above, which contains no names and no messages.
   </p>
   <h3>Where it never works</h3>
   <p>
@@ -296,9 +297,11 @@
   <p>
     Rewrites, replies and translations are performed by Anthropic's Claude
     model. Our server passes the message — and, for a reply with Chat context
-    on, the messages read from the chat — to Anthropic's API and returns the
-    answer to you. Anthropic processes them to produce that answer and does
-    not use them to train its models.
+    on, the messages read from the chat — to Anthropic's API, without the
+    installation number or anything else about you, and returns the answer
+    to you. Anthropic processes them to produce that answer, does not use
+    them to train its models, and may keep them for a limited time under its
+    own policies, for example to detect abuse.
   </p>
   <p>
     Voice notes are transcribed by a model running on our own server, and are
