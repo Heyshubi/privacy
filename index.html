@@ -245,9 +245,11 @@
   <h3>Where the messages go</h3>
   <p>
     The messages read when you tap Reply are sent, over an encrypted
-    connection, to our server, and our server passes them to Anthropic's
-    Claude model, which writes the reply. That is the whole journey: your
-    phone, our server, Anthropic, and back.
+    connection, to our server, and our server passes them to the AI model
+    that writes the reply: Anthropic's Claude for a conversation in English
+    or another language, OpenAI's GPT for one in Hinglish or Hindi. That is
+    the whole journey: your phone, our server, Anthropic or OpenAI, and
+    back.
   </p>
   <p>
     Before they leave the phone they are filtered: any message that looks like
@@ -260,10 +262,10 @@
   <p>
     Nothing. The messages are not saved on your phone, not written to any
     log, and not stored by our server — they are used to write the reply and
-    discarded with the request. Anthropic processes them to produce the answer
-    under its own API terms, does not use them to train its models, and may
-    keep them for a limited time under its own policies, for example to
-    detect abuse. The only thing the app keeps is the fingerprint-to-tone list
+    discarded with the request. Anthropic or OpenAI processes them to produce
+    the answer under its own API terms, does not use them to train its
+    models, and may keep them for a limited time under its own policies, for
+    example up to 30 days to detect abuse. The only thing the app keeps is the fingerprint-to-tone list
     described above, which contains no names and no messages.
   </p>
   <h3>Where it never works</h3>
@@ -366,17 +368,22 @@
 
   <h2>Who processes what</h2>
   <p>
-    Rewrites, replies and translations are performed by Anthropic's Claude
-    model. Our server passes the message — and, for a reply with Chat context
-    on, the messages read from the chat — to Anthropic's API, without the
-    installation number or anything else about you, and returns the answer
-    to you. Anthropic processes them to produce that answer, does not use
-    them to train its models, and may keep them for a limited time under its
-    own policies, for example to detect abuse.
+    Rewrites, replies and translations are written by one of two AI
+    providers, and our server picks which: OpenAI's GPT models write Fix,
+    Rewrite, the tones, your own tones, Translate and replies to Hinglish or
+    Hindi; Anthropic's Claude models write replies to English and other
+    languages, and stand in for OpenAI if it cannot answer. Our server passes
+    the message — and, for a reply with Chat context on, the messages read
+    from the chat — to that provider's API, without the installation number
+    or anything else about you, and returns the answer to you. Each provider
+    processes them only to produce that answer, does not use them to train
+    its models, and may keep them for a limited time under its own policies,
+    for example up to 30 days to detect abuse. We ask OpenAI not to store
+    the answers it writes.
   </p>
   <p>
     Voice notes are transcribed by a model running on our own server, and are
-    not sent to Anthropic or to any other company.
+    not sent to Anthropic, OpenAI or any other company.
   </p>
   <p>
     Our server is hosted on Railway, which operates the infrastructure it runs
@@ -405,7 +412,7 @@
   </p>
   <p>
     Nothing here is ever uploaded. It is not sent to our server, it is not sent
-    to Anthropic, and it is not part of your device backup — the file sits in
+    to Anthropic or OpenAI, and it is not part of your device backup — the file sits in
     the app’s no-backup folder, which Android never carries to Google Drive or
     to a new phone.
   </p>
