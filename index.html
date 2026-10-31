@@ -66,7 +66,7 @@
   <h1>Keybo — Privacy Policy</h1>
   <p class="meta">
     Application ID: <code>com.aikeyboard.app</code><br>
-    Last updated: 25 October 2026
+    Last updated: 31 October 2026
   </p>
 
   <div class="lead">
@@ -79,9 +79,11 @@
     visible on screen in the app you are replying in), a voice note when you
     tap Transcribe, and a promo
     code when you enter one. None of them is kept after it has been answered.
-    If you buy Premium, Google Play handles the payment and our server keeps
-    the receipt that proves it. Nothing is sold, and nothing is used for
-    ads.</p>
+    From version 2.35 you log in with a KEYBO account (Google, Apple or an
+    email code), which holds your email address, your plan and up to two
+    devices &mdash; never what you type. If you buy Premium, Google Play
+    handles the payment and our server keeps the receipt that proves it.
+    Nothing is sold, and nothing is used for ads.</p>
   </div>
 
   <h2>Who this is from</h2>
@@ -332,9 +334,9 @@
   <h2>The installation number</h2>
   <p>
     The first time it runs, the app makes an installation number and sends it
-    with each request. It exists for one reason: to count how many AI actions
-    and transcriptions an install has used, so the free week and the
-    allowances can be applied.
+    with each request. It exists to count how many AI actions and transcriptions an install has
+    used, so the free week and the allowances can be applied, and, once you
+    log in, to tell your account's devices apart.
   </p>
   <p>
     It is made from the ID Android gives Keybo on your phone, scrambled one way
@@ -347,6 +349,47 @@
     keep the random number they already had.
   </p>
 
+  <h2>Your KEYBO account</h2>
+  <p>
+    From version 2.35 the app opens on a login screen, and the AI buttons
+    need an account; typing never does. One account carries your plan and
+    your daily AI allowance to every phone, iPhone and browser you log in on,
+    at most two at a time. You can log in three ways:
+  </p>
+  <ul>
+    <li><strong>Google</strong> &mdash; Google tells us your Google account's
+    number and its verified email address. We ask for nothing else from
+    Google: no contacts, no files, no mail.</li>
+    <li><strong>Sign in with Apple</strong>, on Apple's own page in your
+    browser &mdash; Apple tells us a number that stands for your Apple ID in
+    KEYBO, and your email address, or a private relay address if you choose
+    Hide My Email. The first time only, Apple may also pass on the name you
+    choose to share.</li>
+    <li><strong>An email code</strong> &mdash; we email a 6-digit code to the
+    address you type. The email holds the code and nothing else, and is sent
+    from KEYBO's own mailbox, hellokeybo@gmail.com, through Google's Gmail
+    service.</li>
+  </ul>
+  <p>
+    For an account, our server keeps: its email address, how you log in
+    (Google, Apple or email) and that provider's number for you, your plan
+    and where it came from (Google Play, the App Store, our website or a
+    promo code), the devices logged in to it &mdash; a short name made of
+    the phone's maker and model, such as &ldquo;Samsung SM-A065F&rdquo;,
+    never the name you gave your phone &mdash; when each was last used, and
+    the day's count of AI actions. Login codes are kept only as a scrambled
+    hash, for ten minutes. On your phone, the login is kept in the app's own
+    private storage.
+  </p>
+  <p>
+    <strong>Deleting your account:</strong> in the app, Settings &rsaquo;
+    Account &rsaquo; Delete account. That removes the account, its email,
+    its login details, its devices and its usage at once. It does not
+    cancel a subscription: Google Play owns that, so cancel it in Google
+    Play. If you can no longer open the app, see
+    <a href="delete-account/">Delete your KEYBO account</a>.
+  </p>
+
   <h2>Your plan, and what the server keeps</h2>
   <p>
     Against that number, our server stores only: which plan the install
@@ -354,7 +397,8 @@
     period, when that period resets, whether it is an Android phone or an
     iPhone (read from the request itself), and the first and last day it was
     seen. If you bought Premium, the purchase receipt is kept too (see below).
-    No messages, no audio, no names, no email address, no card details.
+    No messages, no audio and no card details; the email address is the
+    account's, described above.
   </p>
   <p>
     The server also keeps daily totals — how many installs were active, how
@@ -373,14 +417,14 @@
     We never see your card, your bank or your Google account.
   </p>
   <p>
-    When you buy, the app gives Google Play the installation number as
+    When you buy, the app gives Google Play your KEYBO account's number as
     the purchase's account reference, so the subscription can be matched to
-    this install. Our server then receives the purchase token from the app,
+    your account. Our server then receives the purchase token from the app,
     asks Google Play whether it is real and still active, and keeps that
-    token, its order number and the date it renews or ends against the
-    installation number. That is what lets your plan follow you to a new
-    phone when you restore it, and what lets us answer a question about an
-    order. Cancelling is done in Google Play.
+    token, its order number and the date it renews or ends against your
+    account. That is what lets your plan follow you to every device you log
+    in on, and what lets us answer a question about an order. Cancelling is
+    done in Google Play.
   </p>
 
   <h2>Reviews on our website</h2>
@@ -406,8 +450,8 @@
     Hindi; Anthropic's Claude models write replies to English and other
     languages, and stand in for OpenAI if it cannot answer. Our server passes
     the message — and, for a reply with Chat context on, the messages read
-    from the chat — to that provider's API, without the installation number
-    or anything else about you, and returns the answer to you. Each provider
+    from the chat — to that provider's API, without the installation number,
+    your account or anything else about you, and returns the answer to you. Each provider
     processes them only to produce that answer, does not use them to train
     its models, and may keep them for a limited time under its own policies,
     for example up to 30 days to detect abuse. We ask OpenAI not to store
@@ -419,7 +463,8 @@
   </p>
   <p>
     Our server is hosted on Railway, which operates the infrastructure it runs
-    on. Neither our server nor the app keeps your messages after answering.
+    on. Google and Apple run their own sign-in pages, and the login-code
+    emails go out through Google's Gmail service. Neither our server nor the app keeps your messages after answering.
   </p>
   <p>
     Nothing is sold, rented, or shared with anyone else. Nothing is used for
@@ -507,8 +552,8 @@
   <h2>Children</h2>
   <p>
     Keybo is not directed at children under 13, and we do not knowingly
-    collect information from them. Because the app has no accounts and collects
-    no personal details, there is nothing to identify a child by.
+    collect information from them. If we learn that an account belongs to a
+    child under 13, we delete it.
   </p>
 
   <h2>Your choices and your rights</h2>
@@ -527,6 +572,8 @@
     <li><strong>Remove everything</strong> — uninstalling the app deletes
     every setting it stored. The installation number comes back the same if
     you reinstall on this phone; to have our record of it deleted, see below.</li>
+    <li><strong>Delete your account</strong> — Settings &rsaquo; Account
+    &rsaquo; Delete account, in the app. It takes effect at once.</li>
     <li><strong>Ask for deletion</strong> — see
     <a href="#deleting-your-data">Deleting your data</a> below.</li>
   </ul>
@@ -542,10 +589,14 @@
     on your phone and are removed when you uninstall the app.
   </p>
   <p>
-    On our server, the app's data is kept against an anonymous device ID —
-    the installation number described above — with the plan, usage
-    counts and, for Premium, the purchase receipt described above. To have it
-    deleted, email
+    Your KEYBO account is deleted at once from Settings &rsaquo; Account
+    &rsaquo; Delete account. If you cannot open the app any more, follow
+    <a href="delete-account/">Delete your KEYBO account</a>.
+  </p>
+  <p>
+    On our server, the rest is kept against the installation number
+    described above &mdash; the plan, usage counts and, for Premium, the
+    purchase receipt. To have it deleted, email
     <a href="mailto:hellokeybo@gmail.com">hellokeybo@gmail.com</a> from the
     address you want us to reply to, and we will remove it within 30 days. If
     you have Premium, cancel it in Google Play first: once the record is gone
